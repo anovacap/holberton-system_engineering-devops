@@ -1,0 +1,1 @@
+All the exercises for the third day at Holberton School.
