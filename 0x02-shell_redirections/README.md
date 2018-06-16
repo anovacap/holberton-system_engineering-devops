@@ -1,0 +1,1 @@
+Day 5 at Holeberton School - Shell redirection + I/O
