@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Displays Holberton School 10 times using while loop if 9th Hi.
+str='Holberton School'
+i=1
+h='Hi'
+while [ $i -le 10 ]; do
+if [[ $i -eq 10 ]]; then
+echo "$h"
+fi
+echo "$str"
+i="$(( i + 1 ))"
+done
