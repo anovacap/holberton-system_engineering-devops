@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Displays Holberton School 10 times using while loop if 9th Hi.
+str='Holberton School'
+i=1
+b="bad luck"
+g="good_luck"
+while [ $i -le 10 ]; do
+if [[ $i -eq 4 ]]; then
+echo "$b"
+elif [[ $i -eq 8 ]]; then
+echo "$g"
+else
+echo "$str"
+fi
+i="$(( i + 1 ))"
+done
