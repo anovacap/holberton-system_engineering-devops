@@ -2,7 +2,7 @@
 # Displays Holberton School 10 times using unti loop.
 str='Holberton School'
 i=1
-until [[ $i -eq 10 ]]
+until [[ $i -eq 11 ]]
 do
 echo "$str"
 i=$(( i + 1 ))
