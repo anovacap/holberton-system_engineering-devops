@@ -3,7 +3,7 @@
 str='Holberton School'
 i=1
 b="bad luck"
-g="good_luck"
+g="good luck"
 while [ $i -le 10 ]; do
 if [[ $i -eq 4 ]]; then
 echo "$b"
