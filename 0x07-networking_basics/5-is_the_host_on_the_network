@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+var=$*
+if [ ! "$var" ];then
+    echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+    exit
+    fi
+ping -c 5 "$var"
