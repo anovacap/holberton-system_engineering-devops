@@ -1,2 +1,5 @@
 #!/usr/bin/env ruby
-puts ARGV[0].scan(/[A-Z]/).join
+txt = ARGV[0].scan(/\[from:(.*?)\]|\[to:(.*?)\]|\[flags:(.*?)\]/)
+txt.split(:)
+txt.squeeze(' ')
+txt.join(,)
