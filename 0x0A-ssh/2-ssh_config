@@ -1,0 +1,3 @@
+ForwardAgent yes
+PasswordAuthentication no
+IdentityFile ~/.ssh/holberton
