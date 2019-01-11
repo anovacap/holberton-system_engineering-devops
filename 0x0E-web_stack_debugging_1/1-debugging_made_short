@@ -1,5 +1,0 @@
-#!/usr/bin/env bash
-# script that makes nginx listen on port 80 w/pkill -o ngninx
-sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-sudo service nginx restart
-sudo pkill -o nginx
