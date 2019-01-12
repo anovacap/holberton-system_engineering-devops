@@ -1,6 +1,5 @@
-#!/usr/bin/env bash                                                             
-#Configure web-02 like web-01 with a custom response header                     
-sudo apt-get update
+#!/usr/bin/env bash
+#Configure web-02 like web-01 with a custom response header
 sudo apt-get -y install nginx
 FILE=/etc/nginx/sites-available/default
 sudo sed -i "23i\\\tadd_header X-Served-By \$hostname;" $FILE
