@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+#Configure web-02 like web-01 with a custom response header
+sudo apt-get update
+sudo apt install haproxy=1.5\*
+FILE=/etc/haproxy/haproxy.cfg
+echo -e "frontend web-frontend
+\tbind *:80
+\tmode http
+\tdefault_backend web_backend
+backend web_backend
+\tmode http
+\tbalance roundrobin
+\toption forwardfor
+\thttp-request set-header X-Forwarded-Port %[dst_port]
+\tserver web-01 35.237.167.147:80 check
+\tserver web-02 34.73.249.164:80 check" | sudo tee -a $FILE
+sudo service haproxy restart
