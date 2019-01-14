@@ -6,6 +6,6 @@ FILE=/etc/haproxy/haproxy.cfg
 echo -e "listen appname :80
 \tmode http
 \tbalance roundrobin
-\tserver web-01 35.237.167.147:80 check
-\tserver web-02 34.73.249.164:80 check" | sudo tee -a $FILE
+\tserver 378-web-01 35.237.167.147:80 check
+\tserver 378-web-02 34.73.249.164:80 check" | sudo tee -a $FILE
 sudo service haproxy restart
