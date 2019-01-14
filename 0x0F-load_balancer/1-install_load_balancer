@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 #Configure web-02 like web-01 with a custom response header
 sudo apt-get update
-sudo apt install haproxy=1.5\*
+sudo apt -y install haproxy=1.5\*
 FILE=/etc/haproxy/haproxy.cfg
+sudo sed -i "s/ENABLED=0/ENABLED=1"/ /etc/default/haproxy
 echo -e "listen appname :80
 \tmode http
 \tbalance roundrobin
