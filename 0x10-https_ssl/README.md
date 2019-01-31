@@ -13,6 +13,8 @@ File|Task
 2-haproxy_ssl_termination | Answer File
 Directory Name | Description
 100-redirect_http_to_https | HAproxy config as an answer file
+## Directories
+---
 ---|---
 holberton-system_engineering-devops | Shell Scripts
 ## Author
