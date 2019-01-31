@@ -15,6 +15,7 @@ Directory Name | Description
 100-redirect_http_to_https | HAproxy config as an answer file
 ## Directories
 ---
+Directory Name | Description
 ---|---
 holberton-system_engineering-devops | Shell Scripts
 ## Author
