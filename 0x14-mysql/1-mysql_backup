@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# generates MySQL dump creates a tar.gz archive
+mysqldump -u root -p"$1" --all-databases > backup.sql
+TIME=$(date +'%d-%m-%Y')
+tar -czvf "$TIME".tar.gz backup.sql
