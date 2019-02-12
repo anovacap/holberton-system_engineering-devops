@@ -14,26 +14,17 @@ def main():
     todo_js = todo.json()
     user_js = user.json()
     file = "todo_all_employees.json"
-    task_l = []
-    u_id = []
-    uname = []
-    for x in user_js:
-        u_id.append(x.get('id'))
-        uname.append(x.get('username'))
-    for y in todo_js:
-        if y.get('completed') is True:
-            completed = 'true'
-        if y.get('completed') is False:
-            completed = 'false'
-        tasks = y.get('title')
-        for z in uname:
-            task_d = {'task': tasks, 'completed': completed,
-                      'username': z}
-        task_l.append(task_d)
-        for i in u_id:
-            api_json = {i: task_l}
     with open(file, 'w') as json_file:
-        json.dump(api_json, json_file)
+        api_json = {}
+        for x in user_js:
+            task_l = []
+            for y in todo_js:
+                if y['userId'] == x['id']:
+                    task_l.append({'username': x['username'],
+                                   'task': y['title'],
+                                   'completed': y['completed']})
+            api_json[x['id']] = task_l
+        json_file.write(json.dumps(api_json))
 
 if __name__ == "__main__":
     main()
