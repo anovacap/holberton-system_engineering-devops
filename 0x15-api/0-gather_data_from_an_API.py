@@ -8,7 +8,7 @@ import sys
 def main():
     if len(sys.argv) == 2 and type(eval(sys.argv[1])) == int:
         todos_url = "https://jsonplaceholder.typicode.com/todos"
-        user_url = "https://jsonplaceholder.typicode.com/users"
+        user_url = "https://jsonplaceholder.typicode.com/users/"
         todo = requests.get(todos_url)
         user = requests.get(user_url)
         todo_js = todo.json()
@@ -19,6 +19,9 @@ def main():
         for x in user_js:
             if x.get('id') == int(sys.argv[1]):
                 name = x.get('name')
+            else:
+                print("No Employee")
+                return
         for y in todo_js:
             if y.get('userId') == int(sys.argv[1]):
                 count_tasks += 1
@@ -26,10 +29,10 @@ def main():
                     count_finished += 1
                     tasks.append(y.get('title'))
         print("Employee {} is done with tasks({}/{}):".format(name,
-                                                            count_finished,
-                                                            count_tasks))
+                                                              count_finished,
+                                                              count_tasks))
         for z in tasks:
-            print("\t{}".format(z))
+            print("\t {}".format(z))
 
 if __name__ == "__main__":
     main()
