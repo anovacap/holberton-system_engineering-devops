@@ -19,9 +19,6 @@ def main():
         for x in user_js:
             if x.get('id') == int(sys.argv[1]):
                 name = x.get('name')
-            else:
-                print("No Employee")
-                return
         for y in todo_js:
             if y.get('userId') == int(sys.argv[1]):
                 count_tasks += 1
