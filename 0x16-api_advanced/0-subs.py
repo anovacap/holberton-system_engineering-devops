@@ -7,7 +7,7 @@ import requests
 
 def number_of_subscribers(subreddit):
     user_agent = {'User-agent': 'damon'}
-    req = requests.get('http://www.reddit.com/r/{}/about.json?limit=1'
+    req = requests.get('http://www.reddit.com/r/{}/about.json'
                        .format(subreddit), headers=user_agent)
     try:
         sub = req.json().get('data')
