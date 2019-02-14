@@ -17,4 +17,4 @@ def top_ten(subreddit):
                 if k == 'title':
                     print(v)
     except:
-        return (0)
+        print("None")
