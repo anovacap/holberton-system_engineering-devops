@@ -6,7 +6,7 @@ import requests
 
 def top_ten(subreddit):
     user_agent = {'User-agent': 'damon'}
-    req = requests.get('http://www.reddit.com/r/{}/top.json?limit=10'
+    req = requests.get('http://www.reddit.com/r/{}/hot.json?limit=10'
                        .format(subreddit), headers=user_agent)
     try:
         sub = req.json().get('data')
