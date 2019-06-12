@@ -1,2 +1,3 @@
 #!/bin/bash
+# Adds /action to the PATH. /action should be the last dir
 PATH=$PATH:/action
