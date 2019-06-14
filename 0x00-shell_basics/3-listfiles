@@ -1,2 +1,3 @@
 #!/bin/bash
+# Current directory - list files in long format
 ls -l

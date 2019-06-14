@@ -1,2 +1,3 @@
 #!/bin/bash
+# list the current directories file
 ls
